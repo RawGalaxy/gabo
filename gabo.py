@@ -11,16 +11,16 @@ root.configure(bg='beige')
 # Function placeholders for button commands)
 def analyze_screen():
   analyze_button.config(bg='#007D78')
-  log_message("Analyze screen clicked.")
+  log_message("Analyizing")
 
 def optimize_now():
   optimize_button.config(bg='#10A900')
-  log_message("OPTIMIZE NOW clicked.")
+  log_message("Optimizing")
 
 def revert_settings():
   optimize_button.config(bg='#3aeb34')
   analyze_button.config(bg='#2FD6D0')
-  log_message("Revert Settings clicked.")
+  log_message("Settings has been reverted")
 
 def log_message(message):
   log.config(state=tk.NORMAL)
