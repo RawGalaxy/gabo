@@ -58,7 +58,9 @@ Pseudocode
 import win32gui
 import imageio
 import pyautogui
+import pygetWindow as gw
 
+Python grabs the parsec window
 Close/minimize all applications (python left clicks bottom right)
 Opens all the required applications
             >Python clicks search bar at the left bottom, searches the GPU app (MSI Afterburner) and benchmark
