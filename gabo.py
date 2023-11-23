@@ -56,6 +56,8 @@ root.mainloop()
 Pseudocode
 
 import win32gui
+import imageio
+import pyautogui
 
 Close/minimize all applications (python left clicks bottom right)
 Opens all the required applications
