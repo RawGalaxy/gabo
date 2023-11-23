@@ -8,19 +8,19 @@ style = ttk.Style(root)
 style.theme_use("default")
 
 def analisis():
-    log("Analyze screen clicked.")
+    log_message("Analyze screen clicked.")
 
 def optimisasi():
-    log("OPTIMIZE NOW clicked.")
+    log_message("Optimize clicked.")
 
 def balikan_settings():
-    log("Revert Settings clicked.")
+    log_message("Revert Settings clicked.")
 
-def log(message):
-    log.config(state=tk.NORMAL)
-    log.insert(tk.END, message + "\n")
-    log.see(tk.END)
-    log.config(state=tk.DISABLED)
+def log_message(message):
+    log_text.config(state=tk.NORMAL)
+    log_text.insert(tk.END, message + "\n")
+    log_text.see(tk.END)
+    log_text.config(state=tk.DISABLED)
 
 l1 = tk.Label(root, text="GPU AI-Based Optimizer", font=('Times', 20))
 l1.pack(side=tk.TOP)
@@ -45,9 +45,9 @@ bottom_frame.pack(side=tk.BOTTOM, fill=tk.X)
 scrollbar = tk.Scrollbar(bottom_frame)
 scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
 
-log = tk.Text(bottom_frame, height=20, state=tk.DISABLED, yscrollcommand=scrollbar.set)
-log.pack(side=tk.LEFT, fill=tk.X, padx=5, pady=5)
+log_text = tk.Text(bottom_frame, height=20, state=tk.DISABLED, yscrollcommand=scrollbar.set)
+log_text.pack(side=tk.LEFT, fill=tk.X, padx=5, pady=5)
 
-scrollbar.config(command=log.yview)
+scrollbar.config(command=log_text.yview)
 
 root.mainloop()
