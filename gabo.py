@@ -8,13 +8,13 @@ style = ttk.Style(root)
 style.theme_use("default")
 
 def analisis():
-    log_message("Analyze screen clicked.")
+    log_message("Tombol Analyze screen di-klik.")
 
 def optimisasi():
-    log_message("Optimize clicked.")
+    log_message("Tombol Optimize di-klik.")
 
 def balikan_settings():
-    log_message("Revert Settings clicked.")
+    log_message("Tombol Revert Settings di-klik.")
 
 def log_message(message):
     log_text.config(state=tk.NORMAL)
@@ -51,3 +51,22 @@ log_text.pack(side=tk.LEFT, fill=tk.X, padx=5, pady=5)
 scrollbar.config(command=log_text.yview)
 
 root.mainloop()
+
+'''
+Pseudocode
+
+import win32gui
+
+Close/minimize all applications (python left clicks bottom right)
+Opens all the required applications
+            >Python clicks search bar at the left bottom, searches the GPU app (MSI Afterburner) and benchmark
+            >Python moves the apps to their desired location (based on the videographic) 
+Start the algorithm
+            >Python clicks/modifies clockspeed/voltage
+            >Wait for 5 minutes (testing the result of modifying clockspeed/voltage)
+            >Python takes a screenshot of the screen and analyze the benchmark and the graphs
+            >It saves the results and proceeds
+            >If the system crashes, Python uses the previous result and change another value (If increasing the clockspeed makes the system crash, adjust the voltage instead and vice versa)
+            >Python gathers all the required information then gives result on what the most optimal clockspeed and voltage
+Output the results
+'''
